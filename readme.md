@@ -13,24 +13,24 @@
 ## Design
 
 - **Navbar**: Create a visually appealing navbar with the following structure:
-  - Logo positioned in the middle.
-  - "Blog" button on the left.
-  - Account balance with a coin icon on the right.
-  - "Donation" and "History" buttons in the center (as per Figma).
+  - Logo positioned in the middle. done****
+  - "Blog" button on the left. done****
+  - Account balance with a coin icon on the right. done****
+  - "Donation" and "History" buttons in the center (as per Figma). done****
 - **Donation Cards**: Create 3 donation cards with the following details:
-  - Image on the left.
-  - Donation title.
-  - Donation info.
-  - Current donation amount.
-  - Input field for donation amount.
-  - Button for submitting the donation.
+  - Image on the left. done****
+  - Donation title. done****
+  - Donation info. done****
+  - Current donation amount. done****
+  - Input field for donation amount. done****
+  - Button for submitting the donation. done****
 - **History Section**: Initially hidden and empty.
 
 ## Functionalities
 
 - **Donation and History Button Functionality**:
-  - Clicking the "History" button will hide the donation data and display the history.
-  - Clicking the "Donation" button will hide the history and display the donation data.
+  - Clicking the "History" button will hide the donation data and display the history. done****
+  - Clicking the "Donation" button will hide the history and display the donation data. done****
 - **Donation Functionality for Each Card**:
   - When the "Donate Now" button is clicked:
     - The donation input will be deducted from the total account balance, and the updated balance will be shown.
@@ -50,7 +50,7 @@
 
 ## Challenges
 
-- **Sticky Navbar**: Make the navbar sticky to the top of the page.
+- **Sticky Navbar**: Make the navbar sticky to the top of the page. 
 - **Blog Page**: Create a `blog.html` file and link it to the main page:
   - The blog page should contain 4 questions and their answers:
     1. What is the Document Object Model (DOM)?
