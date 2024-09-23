@@ -39,6 +39,7 @@ donateBtn1.addEventListener('click', function(){
 
         if(inputDonate1 <= 0 || isNaN(inputDonate1)){
             alert('Please Enter a valid amount');
+            document.getElementById('inputDonate1').value = '';
         }
 
         else{
@@ -52,16 +53,32 @@ donateBtn1.addEventListener('click', function(){
             myModal1.showModal();
 
         }
-
         
 });
 
 //card2 calculation
 donateBtn2.addEventListener('click', function(){
 
-    const donateNumbers2 = getDonateNumbers('donateNumbers2');
-    
-    console.log(donateNumbers2);
+    const donateCounter = parseFloat(document.getElementById('donateCounter').innerText);
+    const donateCount2 = parseFloat(document.getElementById('donateCount2').innerText);
+    const inputDonate2 = parseFloat(document.getElementById('inputDonate2').value);
+
+    if(inputDonate2 <= 0 || isNaN(inputDonate2)){
+        alert('Please Enter a valid amount');
+        document.getElementById('inputDonate1').value = '';
+    }
+
+    else{
+        const donateValue = donateCount2 + inputDonate2;
+        const newDonateCounter = donateCounter - inputDonate2;
+
+        document.getElementById('donateCount2').innerText = donateValue.toFixed(2);
+        document.getElementById('donateCounter').innerText = newDonateCounter.toFixed(2);
+
+        const myModal1 = document.getElementById('my_modal_1');
+        myModal1.showModal();
+
+    }
 
 })
 
@@ -92,6 +109,7 @@ historyBtn.addEventListener('click', function(){
 
 
     const inputDonate1 = parseFloat(document.getElementById('inputDonate1').value);
+    const inputDonate2 = parseFloat(document.getElementById('inputDonate2').value);
     const title1 = getTitle('title1');
     const title2 = getTitle('title2');
     const title3 = getTitle('title3');
@@ -102,6 +120,13 @@ historyBtn.addEventListener('click', function(){
     <h3 class=" font-extrabold text-xl mb-3 ">${inputDonate1} Taka is ${title1}</h3>
     <p>Date : ${new Date()}</p>
     `
-
     historySection.insertBefore(historyItem1, historySection.firstChild);
+
+    const historyItem2 = document.createElement('div');
+    historyItem2.className = 'p-5 border border-gray-400 rounded-xl mb-8'
+    historyItem2.innerHTML = `
+    <h3 class=" font-extrabold text-xl mb-3 ">${inputDonate2} Taka is ${title2}</h3>
+    <p>Date : ${new Date()}</p>
+    `
+    historySection.insertBefore(historyItem2, historySection.firstChild);
 });
