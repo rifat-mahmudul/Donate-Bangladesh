@@ -63,6 +63,9 @@ donateBtn1.addEventListener('click', function(){
             `
             historySection.insertBefore(historyItem1, historySection.firstChild);
 
+            const noHistory = document.getElementById('noHistory');
+            noHistory.classList.add('hidden');
+
         }
         
 });
@@ -99,6 +102,9 @@ donateBtn2.addEventListener('click', function(){
         <p>Date : ${new Date()}</p>
         `
         historySection.insertBefore(historyItem2, historySection.firstChild);
+        
+        const noHistory = document.getElementById('noHistory');
+        noHistory.classList.add('hidden');
 
     }
 
@@ -136,6 +142,9 @@ donateBtn3.addEventListener('click', function(){
         <p>Date : ${new Date()}</p>
         `
         historySection.insertBefore(historyItem3, historySection.firstChild);
+        
+        const noHistory = document.getElementById('noHistory');
+        noHistory.classList.add('hidden');
 
     }
 
