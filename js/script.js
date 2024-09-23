@@ -52,6 +52,17 @@ donateBtn1.addEventListener('click', function(){
             const myModal1 = document.getElementById('my_modal_1');
             myModal1.showModal();
 
+            document.getElementById('inputDonate1').value = '';
+
+            const title1 = getTitle('title1');
+            const historyItem1 = document.createElement('div');
+            historyItem1.className = 'p-5 border border-gray-400 rounded-xl mb-8'
+            historyItem1.innerHTML = `
+            <h3 class=" font-extrabold text-xl mb-3 ">${inputDonate1} Taka is ${title1}</h3>
+            <p>Date : ${new Date()}</p>
+            `
+            historySection.insertBefore(historyItem1, historySection.firstChild);
+
         }
         
 });
@@ -77,6 +88,17 @@ donateBtn2.addEventListener('click', function(){
 
         const myModal1 = document.getElementById('my_modal_1');
         myModal1.showModal();
+
+        document.getElementById('inputDonate2').value = '';
+
+        const title2 = getTitle('title2');
+        const historyItem2 = document.createElement('div');
+        historyItem2.className = 'p-5 border border-gray-400 rounded-xl mb-8'
+        historyItem2.innerHTML = `
+        <h3 class=" font-extrabold text-xl mb-3 ">${inputDonate2} Taka is ${title2}</h3>
+        <p>Date : ${new Date()}</p>
+        `
+        historySection.insertBefore(historyItem2, historySection.firstChild);
 
     }
 
@@ -104,6 +126,17 @@ donateBtn3.addEventListener('click', function(){
         const myModal1 = document.getElementById('my_modal_1');
         myModal1.showModal();
 
+        document.getElementById('inputDonate3').value = '';
+
+        const title3 = getTitle('title3');
+        const historyItem3 = document.createElement('div');
+        historyItem3.className = 'p-5 border border-gray-400 rounded-xl mb-8'
+        historyItem3.innerHTML = `
+        <h3 class=" font-extrabold text-xl mb-3 ">${inputDonate3} Taka is ${title3}</h3>
+        <p>Date : ${new Date()}</p>
+        `
+        historySection.insertBefore(historyItem3, historySection.firstChild);
+
     }
 
 });
@@ -124,37 +157,4 @@ historyBtn.addEventListener('click', function(){
 
     const footerSection = document.getElementById('footerSection');
     footerSection.classList.add('hidden');
-
-
-    const inputDonate1 = parseFloat(document.getElementById('inputDonate1').value);
-    const inputDonate2 = parseFloat(document.getElementById('inputDonate2').value);
-    const inputDonate3 = parseFloat(document.getElementById('inputDonate3').value);
-
-    const title1 = getTitle('title1');
-    const title2 = getTitle('title2');
-    const title3 = getTitle('title3');
-
-    const historyItem1 = document.createElement('div');
-    historyItem1.className = 'p-5 border border-gray-400 rounded-xl mb-8'
-    historyItem1.innerHTML = `
-    <h3 class=" font-extrabold text-xl mb-3 ">${inputDonate1} Taka is ${title1}</h3>
-    <p>Date : ${new Date()}</p>
-    `
-    historySection.insertBefore(historyItem1, historySection.firstChild);
-
-    const historyItem2 = document.createElement('div');
-    historyItem2.className = 'p-5 border border-gray-400 rounded-xl mb-8'
-    historyItem2.innerHTML = `
-    <h3 class=" font-extrabold text-xl mb-3 ">${inputDonate2} Taka is ${title2}</h3>
-    <p>Date : ${new Date()}</p>
-    `
-    historySection.insertBefore(historyItem2, historySection.firstChild);
-
-    const historyItem3 = document.createElement('div');
-    historyItem3.className = 'p-5 border border-gray-400 rounded-xl mb-8'
-    historyItem3.innerHTML = `
-    <h3 class=" font-extrabold text-xl mb-3 ">${inputDonate3} Taka is ${title3}</h3>
-    <p>Date : ${new Date()}</p>
-    `
-    historySection.insertBefore(historyItem3, historySection.firstChild);
 });
