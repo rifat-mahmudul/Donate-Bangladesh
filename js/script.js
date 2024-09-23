@@ -37,7 +37,7 @@ donateBtn1.addEventListener('click', function(){
         const donateCount1 = parseFloat(document.getElementById('donateCount1').innerText);
         const inputDonate1 = parseFloat(document.getElementById('inputDonate1').value);
 
-        if(inputDonate1 <= 0 || isNaN(inputDonate1)){
+        if(inputDonate1 <= 0 || isNaN(inputDonate1) || inputDonate1 > donateCounter){
             alert('Please Enter a valid amount');
             document.getElementById('inputDonate1').value = '';
         }
@@ -63,9 +63,9 @@ donateBtn2.addEventListener('click', function(){
     const donateCount2 = parseFloat(document.getElementById('donateCount2').innerText);
     const inputDonate2 = parseFloat(document.getElementById('inputDonate2').value);
 
-    if(inputDonate2 <= 0 || isNaN(inputDonate2)){
+    if(inputDonate2 <= 0 || isNaN(inputDonate2) || inputDonate2 > donateCounter){
         alert('Please Enter a valid amount');
-        document.getElementById('inputDonate1').value = '';
+        document.getElementById('inputDonate2').value = '';
     }
 
     else{
@@ -85,8 +85,26 @@ donateBtn2.addEventListener('click', function(){
 //card3 calculation
 donateBtn3.addEventListener('click', function(){
 
-    const donateNumbers3 = getDonateNumbers('donateNumbers3');
-    console.log(donateNumbers3);
+    const donateCounter = parseFloat(document.getElementById('donateCounter').innerText);
+    const donateCount3 = parseFloat(document.getElementById('donateCount3').innerText);
+    const inputDonate3 = parseFloat(document.getElementById('inputDonate3').value);
+
+    if(inputDonate3 <= 0 || isNaN(inputDonate3) || inputDonate3 > donateCounter){
+        alert('Please Enter a valid amount');
+        document.getElementById('inputDonate3').value = '';
+    }
+
+    else{
+        const donateValue = donateCount3 + inputDonate3;
+        const newDonateCounter = donateCounter - inputDonate3;
+
+        document.getElementById('donateCount3').innerText = donateValue.toFixed(2);
+        document.getElementById('donateCounter').innerText = newDonateCounter.toFixed(2);
+
+        const myModal1 = document.getElementById('my_modal_1');
+        myModal1.showModal();
+
+    }
 
 });
 
@@ -110,6 +128,8 @@ historyBtn.addEventListener('click', function(){
 
     const inputDonate1 = parseFloat(document.getElementById('inputDonate1').value);
     const inputDonate2 = parseFloat(document.getElementById('inputDonate2').value);
+    const inputDonate3 = parseFloat(document.getElementById('inputDonate3').value);
+
     const title1 = getTitle('title1');
     const title2 = getTitle('title2');
     const title3 = getTitle('title3');
@@ -129,4 +149,12 @@ historyBtn.addEventListener('click', function(){
     <p>Date : ${new Date()}</p>
     `
     historySection.insertBefore(historyItem2, historySection.firstChild);
+
+    const historyItem3 = document.createElement('div');
+    historyItem3.className = 'p-5 border border-gray-400 rounded-xl mb-8'
+    historyItem3.innerHTML = `
+    <h3 class=" font-extrabold text-xl mb-3 ">${inputDonate3} Taka is ${title3}</h3>
+    <p>Date : ${new Date()}</p>
+    `
+    historySection.insertBefore(historyItem3, historySection.firstChild);
 });
