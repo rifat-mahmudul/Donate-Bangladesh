@@ -3,7 +3,7 @@ function getButton(id){
     return button;
 };
 
-function getDonateNumbers(id){
+function getInputDonate(id){
     const donateNumber = parseFloat(document.getElementById(id).value);
     return donateNumber;
 };

@@ -14,6 +14,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
 
+    <!-- remix-icon cdn link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.min.css" integrity="sha512-MqL4+Io386IOPMKKyplKII0pVW5e+kb+PI/I3N87G3fHIfrgNNsRpzIXEi+0MQC0sR9xZNqZqCYVcC61fL5+Vg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <!-- fav-icon link -->
     <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
 
@@ -55,9 +58,88 @@
     </header>
     <!-- header section end -->
 
-    
+    <main>
+        <div class="max-w-[90%] lg:max-w-6xl mx-auto mt-5">
+
+            <div>
+                <h1 class="font-bold text-2xl mt-5 mb-4">Important FAQ <i class="ri-questionnaire-line text-3xl font-normal animate-pulse"></i></h1>
+            </div>
+
+            <div class="p-5 border border-gray-400 rounded-xl mb-8">
+
+                <div class="flex justify-between items-center border border-gray-300 rounded-md p-3">
+                    <div class="sm:w-2/3">
+                        <h1 class="font-bold text-xl">What is the Document Object Model (DOM)?</h1>
+                        <p class="hidden mt-3" id="pera1">The Document Object Model represents an HTML document as a tree, where each node is an object corresponding to a part of the document (such as an element, attribute, or text).</p>
+                    </div>
+
+                    <div>
+                        <button class="font-bold text-xl"><i class="ri-add-line" onclick="plusBtn()" id="plusBtn1"></i></button>
+                        <button class="font-bold text-xl" onclick="minusBtn()"><i class="ri-subtract-line hidden" id="minusBtn1"></i></button>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center border border-gray-300 rounded-md p-3 mt-5">
+                    <div class="sm:w-2/3">
+                        <h1 class="font-bold text-xl">How do you select an element from the DOM?</h1>
+                        <p class="hidden mt-3" id="pera2">We can select an element from the DOM (Document Object Model) in JavaScript in many ways. Here are the most commonly used methods: <br>
+                            1. document.getElementById();<br>
+                            2. document.getElementsByClassName();<br>
+                            3. document.getElementsByTagName();<br>
+                            4. document.querySelector();<br>
+                            5. document.querySelectorAll();
+                        </p>
+                    </div>
+
+                    <div>
+                        <button class="font-bold text-xl"><i class="ri-add-line" onclick="plusBtn2()" id="plusBtn2"></i></button>
+                        <button class="font-bold text-xl" onclick="minusBtn2()"><i class="ri-subtract-line hidden" id="minusBtn2"></i></button>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center border border-gray-300 rounded-md p-3 mt-5">
+                    <div class="sm:w-2/3">
+                        <h1 class="font-bold text-xl">What is event delegation in the context of the DOM, and why is it useful?</h1>
+                        <p class="hidden mt-3" id="pera3">Event delegation is one of the most popular technique in JavaScript where instead of attaching event listeners to individual child elements, a single event listener is attached to a common parent element. The event is then "delegated" to the child elements using event bubbling (or event propagation). When an event occurs on a child element, it bubbles up through the DOM and can be captured by the parent, allowing you to determine which specific child element triggered the event.
+                        </p>
+                    </div>
+
+                    <div>
+                        <button class="font-bold text-xl"><i class="ri-add-line" onclick="plusBtn3()" id="plusBtn3"></i></button>
+                        <button class="font-bold text-xl" onclick="minusBtn3()"><i class="ri-subtract-line hidden" id="minusBtn3"></i></button>
+                    </div>
+                </div>
+
+                <div class="flex justify-between items-center border border-gray-300 rounded-md p-3 mt-5">
+                    <div class="sm:w-2/3">
+                        <h1 class="font-bold text-xl">How do you manipulate an element's attributes and styles using the DOM?</h1>
+                        <p class="hidden mt-3" id="pera4">To manipulate an element’s attributes and styles using the DOM, we can utilize a variety of JavaScript methods and properties. Here are the most commonly used methods: <br>
+                            <span class="font-bold text-xl">For Manipulating Attributes</span><br>
+                            1.setAttribute();<br>
+                            2.getAttribute();<br>
+                            3.removeAttribute();<br>
+
+                            <span class="font-bold text-xl">For Manipulating Styles</span><br>
+                            1.style property<br>
+                            2.classList.add()<br>
+                            3.classList.remove()<br>
+                        </p>
+                    </div>
+
+                    <div>
+                        <button class="font-bold text-xl"><i class="ri-add-line" onclick="plusBtn4()" id="plusBtn4"></i></button>
+                        <button class="font-bold text-xl" onclick="minusBtn4()"><i class="ri-subtract-line hidden" id="minusBtn4"></i></button>
+                    </div>
+                </div>
+
+
+            </div>
+
+        </div>
+    </main>
 
     <script src="js/utilities.js"></script>
     <script src="js/logo.js"></script>
+    <script src="js/faq.js"></script>
 </body>
 </html>

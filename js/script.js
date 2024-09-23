@@ -42,15 +42,16 @@ donateBtn1.addEventListener('click', function(){
 
         const donateCounter = getAmountCount('donateCounter');
         const donateCount1 = getAmountCount('donateCount1');
-        const donateNumbers1 = getDonateNumbers('donateNumbers1');
+        const inputDonate1 = getInputDonate('inputDonate1');
 
-        if(donateNumbers1 < 0 || isNaN(donateNumbers1)){
+        if(inputDonate1 < 0 || isNaN(inputDonate1)){
             alert('invalid input');
         }
 
         else{
-            const donateValue = donateCount1 + donateNumbers1;
+            const donateValue = donateCount1 + inputDonate1;
             const newDonateCounter = donateCounter - donateValue;
+
             donateCount1.innerText = donateValue.toFixed(2);
             donateCounter.innerText = newDonateCounter.toFixed(2);
 
